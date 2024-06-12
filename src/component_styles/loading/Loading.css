@@ -1,0 +1,36 @@
+
+.loading-box-wrapper{
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(47, 19, 19, .5);
+    z-index: 999;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-box-visible{
+    display: flex!important;
+}
+
+.loading-box{
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    border: .5rem double transparent;
+}
+
+.loading-box > span{
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 2rem;
+    border-radius: 1.5rem;
+}

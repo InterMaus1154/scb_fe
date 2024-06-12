@@ -1,0 +1,68 @@
+/*resets and global settings*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --max-body-width: 1500px;
+    --top-bottom-margin-full-width: 0;
+    --section-heading-size: 1.75rem;
+    --section-subheading-size: 1.5rem;
+}
+
+html, body {
+    font-family: 'Roboto', 'Arial', system-ui, 'Times New Roman', -apple-system, sans-serif;
+}
+
+body {
+    max-width: var(--max-body-width);
+    margin: 0 auto;
+
+    background-color: var(--body-bg);
+    color: var(--txt-clr);
+}
+
+a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+}
+
+img,svg{
+    display: block;
+    max-width: 100%;
+}
+
+/*full width utility class*/
+.full-width {
+    width: 100vw;
+    margin: var(--top-bottom-margin-full-width) calc(-50vw + 50%);
+}
+
+.wrapper-inner{
+    max-width: var(--max-body-width);
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+}
+
+/*full width inner utility*/
+.full-width-inner {
+    max-width: var(--max-body-width);
+    margin: 0 auto;
+}
+
+/*global section main heading text, h1*/
+.section-heading {
+    font-size: var(--section-heading-size);
+}
+
+/*sub heading if applicable, h2*/
+.section-subheading{
+    font-size: var(--section-subheading-size);
+}
+
+.resource-page{
+    padding: 2rem;
+}

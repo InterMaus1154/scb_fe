@@ -1,0 +1,241 @@
+
+.header-wrapper {
+    background-color: #2f1313;
+    width: 100vw;
+    margin: 0 calc(-50vw + 50%);
+    color: #fff;
+    z-index: 10;
+
+    animation: header-sticky-back .75s linear backwards;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.header-inner {
+    max-width: var(--max-body-width);
+    margin: 0 auto;
+
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    text-align: center;
+}
+
+.logo-wrapper .icon-svg {
+    width: 25%;
+}
+
+
+/*hamburger button*/
+.hamburger-icon{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.hamburger-icon:hover{
+    background-color: #f9f3b9;
+}
+
+.hamburger-icon:hover span{
+    background-color: #2f1313;
+}
+
+.hamburger-icon:active{
+    scale: .95;
+}
+
+.hamburger-icon span{
+    width: 90%;
+    height: 5px;
+    border-radius: 12px;
+    background-color: #f3f3f3;
+}
+
+.header-wrapper-sticky .is-nav-active, .header-wrapper .is-nav-active{
+    display: block;
+}
+
+/*navigation*/
+.header-wrapper nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 1rem;
+    font-size: 1.125rem;
+
+}
+
+.header-wrapper nav ul li a:not(.is-link-active, .highlighted-link):hover{
+    text-decoration: underline;
+    text-decoration-color: #E07A5F;
+    text-decoration-skip-ink: none;
+}
+
+/*currently active page link*/
+.is-link-active{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #E07A5F;
+    text-underline-offset: 2px;
+    text-decoration-skip-ink: none;
+}
+
+.is-link-active:hover{
+    text-decoration: none;
+}
+
+/*highlighted link(s)*/
+.highlighted-link{
+    border: 1px solid #f5f5f5;
+    padding: .75rem 1.25rem;
+    border-radius: 1.5rem;
+    font-size: 1.125em;
+}
+
+.highlighted-link:hover{
+    background-color: #f5f5f5;
+    color: #0f1626;
+}
+
+/*
+    For sticky navigation on scroll
+*/
+
+.header-wrapper-sticky {
+    width: 25vw;
+    margin: 0 calc(-12.5vw + 50%);
+
+    border-radius: 12px;
+    border: 1px solid #fff;
+
+    position: fixed;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    animation: header-sticky .75s linear forwards;
+}
+
+/*desktop only*/
+@media(min-width: 769px){
+    .header-wrapper-sticky .header-inner{
+        flex-wrap: wrap;
+    }
+
+    .header-wrapper-sticky .logo-wrapper{
+        flex-basis: 75%;
+    }
+
+    .header-wrapper-sticky nav{
+        display: none;
+        flex-basis: 100%;
+    }
+
+    .header-wrapper-sticky .hamburger-icon{
+        display: flex;
+    }
+
+    .header-wrapper-sticky nav ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.header-wrapper-sticky .header-inner{
+    padding: .25rem 1rem;
+}
+
+.header-wrapper-sticky .logo-wrapper h1{
+    display: none;
+}
+
+.header-wrapper-sticky .logo-wrapper .icon-svg{
+    width: 20%;
+}
+
+@keyframes header-sticky {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes header-sticky-back {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to{
+        transform: translateY(0);
+    }
+}
+
+/*
+End of sticky settings
+*/
+
+/*for mobile res*/
+@media (max-width: 768px) {
+
+    .header-wrapper-sticky{
+        width: 75%;
+        margin: 0 calc(-37.5vw + 50%);
+    }
+
+    .logo-wrapper{
+        flex-basis: 75%;
+    }
+
+    .logo-wrapper .icon-svg {
+        width: 50px;
+    }
+
+    .header-wrapper .header-inner {
+        padding: .5rem .25rem;
+        flex-wrap: wrap;
+    }
+
+    nav{
+        flex-basis: 100%;
+        display: none;
+    }
+
+    .hamburger-icon{
+        margin-left: auto;
+        display: flex;
+    }
+
+    nav ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}

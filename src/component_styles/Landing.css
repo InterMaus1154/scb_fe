@@ -1,0 +1,82 @@
+/*hero section begin*/
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .4);
+    inset: 0;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-overlay .box {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-color: rgba(255, 255, 255, .6);
+    width: 25%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.video-overlay .box h1 {
+    font-size: 2rem;
+}
+
+.video-overlay .box h2 {
+    font-size: 1.5rem;
+}
+
+.video-overlay .box h3 {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.video-overlay .box h3 a {
+    text-decoration: underline;
+}
+
+.hero-section video {
+    height: 100vh;
+    min-width: 100vw;
+    z-index: 0;
+    isolation: isolate;
+    object-fit: cover;
+}
+
+/*hero section end*/
+
+
+.meet-team-call-to-action {
+    background-color: #2f1313;
+}
+
+.meet-team-call-to-action .wrapper-inner {
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.meet-team-call-to-action .wrapper-inner a {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+}
+
+
+@media (max-width: 768px) {
+    .video-overlay .box {
+        width: 75%;
+    }
+}

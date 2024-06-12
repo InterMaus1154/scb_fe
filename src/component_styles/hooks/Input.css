@@ -1,0 +1,88 @@
+
+.form-input-wrapper label{
+    position: relative;
+    display: block;
+    cursor: text;
+}
+
+.form-input-wrapper label .veil{
+    position: absolute;
+    inset: 0;
+}
+
+.form-input-wrapper label .veil:focus-visible{
+    outline: 2px solid yellow;
+}
+
+.form-input-wrapper label .veil-behind{
+    z-index: -1;
+}
+
+input[disabled]:focus + .veil{
+    background-color: #2f1313;
+}
+
+.form-input-wrapper label span {
+    margin-bottom: .25rem;
+    margin-right: .25rem;
+    display: inline-block;
+    position: relative;
+}
+
+.form-input-wrapper input::placeholder {
+    font-style: italic;
+}
+
+button[type="submit"] {
+    font-weight: bold;
+    border-radius: 1.5rem;
+    border: 1px solid black;
+    padding: .5rem 1rem;
+    background-color: #fff;
+
+    cursor: pointer;
+}
+
+button[type="submit"]:active{
+    scale: .95;
+}
+
+.form-input-wrapper.required-input span::after {
+    content: '*';
+    color: red;
+}
+
+.form-input-wrapper.non-required-input span::after {
+    content: '(optional)';
+    color: inherit;
+    font-style: italic;
+    font-size: .8rem;
+}
+
+.form-input-wrapper input:not([type="checkbox"]), .form-input-wrapper select{
+    border: 0;
+    padding: .5rem .5rem;
+    border-radius: .5rem;
+    width: 100%;
+    color: #2f1313;
+}
+
+.form-input-fields{
+    --gap: .5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.form-input-fields > *{
+    grid-column: span 1;
+    min-width: calc(50% - var(--gap));
+}
+
+@media(max-width: 768px){
+    .form-input-fields > *{
+        grid-column: span 2;
+        min-width: calc(50% - var(--gap));
+    }
+}
