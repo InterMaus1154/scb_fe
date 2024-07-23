@@ -16,6 +16,7 @@ const ProfileDetails: FC = () => {
     return (
         <div className="profile-details-section">
             <h2 className="section-subheading">Profile details</h2>
+            <h3><em>Will be coming soon!</em></h3>
         </div>
     );
 };
