@@ -106,7 +106,8 @@ const DogRegisterForm: FC = () => {
 
     //other details
     const {TextInput: OtherInput, input: otherInput} = useTextInput({
-        label: "Emergency phone number",
+        label: "Other detail",
+        placeholder: "Optional additional information you think might be useful",
         required: false,
         maxLength: 500
     });

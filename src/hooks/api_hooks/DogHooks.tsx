@@ -69,7 +69,7 @@ export const useCreateDog = () => {
     const {setIsLoading} = useContext(LoadingBoxContext);
 
     //customer object
-    const {customerUser, setCustomerUser} = useContext(AuthContext);
+    const {setCustomerUser} = useContext(AuthContext);
 
     //for redirects
     const navigate = useNavigate();

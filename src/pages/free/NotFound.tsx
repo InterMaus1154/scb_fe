@@ -4,7 +4,7 @@ import FreePage from "@pages/free/FreePage.tsx";
 const NotFound = () => {
     return (
         <FreePage>
-            <h1>The requested page is not found</h1>
+            <h1>404: The requested page is not found</h1>
         </FreePage>
     );
 };
